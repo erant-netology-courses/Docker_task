@@ -1,0 +1,116 @@
+cat manifest.json
+[
+  {
+    "Config": "blobs/sha256/ca3c514dab11208e53a76949f872da4a782d28b4603ca4c3f4702c29a2092a12",
+    "RepoTags": [
+      "hashicorp/terraform:latest"
+    ],
+    "Layers": [
+      "blobs/sha256/5aa68bbbc67e405a7cfa11466b02f1c9597add532909fb9a4d0f6f58a30b044e",
+      "blobs/sha256/327b6eb64165183264dfb204dfa0bafca4610df7a7cf6bc08cecb2073a3ecd1e",
+      "blobs/sha256/dc0b7a6682cc14eafa56150a2630f18764037c61283379130b4c7484e23b2906",
+      "blobs/sha256/7e2a9243ac37762b061fe61d62ebfc3d8905f41c158cc183fd9863645fb45824"
+    ],
+    "LayerSources": {
+      "sha256:327b6eb64165183264dfb204dfa0bafca4610df7a7cf6bc08cecb2073a3ecd1e": {
+        "mediaType": "application/vnd.oci.image.layer.v1.tar",
+        "size": 21144576,
+        "digest": "sha256:327b6eb64165183264dfb204dfa0bafca4610df7a7cf6bc08cecb2073a3ecd1e"
+      },
+      "sha256:5aa68bbbc67e405a7cfa11466b02f1c9597add532909fb9a4d0f6f58a30b044e": {
+        "mediaType": "application/vnd.oci.image.layer.v1.tar",
+        "size": 8724480,
+        "digest": "sha256:5aa68bbbc67e405a7cfa11466b02f1c9597add532909fb9a4d0f6f58a30b044e"
+      },
+      "sha256:7e2a9243ac37762b061fe61d62ebfc3d8905f41c158cc183fd9863645fb45824": {
+        "mediaType": "application/vnd.oci.image.layer.v1.tar",
+        "size": 100575744,
+        "digest": "sha256:7e2a9243ac37762b061fe61d62ebfc3d8905f41c158cc183fd9863645fb45824"
+      },
+      "sha256:dc0b7a6682cc14eafa56150a2630f18764037c61283379130b4c7484e23b2906": {
+        "mediaType": "application/vnd.oci.image.layer.v1.tar",
+        "size": 8704,
+        "digest": "sha256:dc0b7a6682cc14eafa56150a2630f18764037c61283379130b4c7484e23b2906"
+      }
+    }
+  }
+]
+
+docker image inspect hashicorp/terraform:latest
+[
+    {
+        "Id": "sha256:ca3c514dab11208e53a76949f872da4a782d28b4603ca4c3f4702c29a2092a12",
+        "RepoTags": [
+            "hashicorp/terraform:latest"
+        ],
+        "RepoDigests": [
+            "hashicorp/terraform@sha256:eee2f7d5725bfcfd734dfc9fe5a3df4b58b00eb8cc874993458108d8943265cf"
+        ],
+        "Parent": "",
+        "Comment": "buildkit.dockerfile.v0",
+        "Created": "2025-12-11T11:58:55.686243212Z",
+        "DockerVersion": "",
+        "Author": "",
+        "Config": {
+            "Hostname": "",
+            "Domainname": "",
+            "User": "",
+            "AttachStdin": false,
+            "AttachStdout": false,
+            "AttachStderr": false,
+            "Tty": false,
+            "OpenStdin": false,
+            "StdinOnce": false,
+            "Env": [
+                "PATH=/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin"
+            ],
+            "Cmd": null,
+            "Image": "",
+            "Volumes": null,
+            "WorkingDir": "/",
+            "Entrypoint": [
+                "/bin/terraform"
+            ],
+            "OnBuild": null,
+            "Labels": {
+                "com.hashicorp.terraform.version": "1.14.2",
+                "maintainer": "HashiCorp Terraform Team <terraform@hashicorp.com>",
+                "org.opencontainers.image.authors": "HashiCorp Terraform Team <terraform@hashicorp.com>",
+                "org.opencontainers.image.description": "Terraform enables you to safely and predictably create, change, and improve infrastructure",
+                "org.opencontainers.image.documentation": "https://www.terraform.io/docs",
+                "org.opencontainers.image.licenses": "BUSL-1.1",
+                "org.opencontainers.image.revision": "a7f13bf12b7cd8b478021debc4eee058efd1a3ce",
+                "org.opencontainers.image.source": "https://github.com/hashicorp/terraform",
+                "org.opencontainers.image.title": "terraform",
+                "org.opencontainers.image.url": "https://www.terraform.io/",
+                "org.opencontainers.image.vendor": "HashiCorp",
+                "org.opencontainers.image.version": "1.14.2",
+                "version": "1.14.2"
+            }
+        },
+        "Architecture": "amd64",
+        "Os": "linux",
+        "Size": 129705111,
+        "GraphDriver": {
+            "Data": {
+                "LowerDir": "/var/lib/docker/overlay2/0f75db2a150185c7025381ec7df13c01836682ce10be9e6b3a9cf43919641a77/diff:/var/lib/docker/overlay2/cd02d419cbafec1db009ff36572816f029ea4f8dc8224b6147d45d174494c6f1/diff:/var/lib/docker/overlay2/da4c76a00ce1ed3ec7efc2b65704a1d19b63d51f6f02bf3a97f654fd6b067fd1/diff",
+                "MergedDir": "/var/lib/docker/overlay2/63d6318a667a7194b844a0b00094254bc55298c11dc967ecc4a3eb31be4be8fb/merged",
+                "UpperDir": "/var/lib/docker/overlay2/63d6318a667a7194b844a0b00094254bc55298c11dc967ecc4a3eb31be4be8fb/diff",
+                "WorkDir": "/var/lib/docker/overlay2/63d6318a667a7194b844a0b00094254bc55298c11dc967ecc4a3eb31be4be8fb/work"
+            },
+            "Name": "overlay2"
+        },
+        "RootFS": {
+            "Type": "layers",
+            "Layers": [
+                "sha256:5aa68bbbc67e405a7cfa11466b02f1c9597add532909fb9a4d0f6f58a30b044e",
+                "sha256:327b6eb64165183264dfb204dfa0bafca4610df7a7cf6bc08cecb2073a3ecd1e",
+                "sha256:dc0b7a6682cc14eafa56150a2630f18764037c61283379130b4c7484e23b2906",
+                "sha256:7e2a9243ac37762b061fe61d62ebfc3d8905f41c158cc183fd9863645fb45824"
+            ]
+        },
+        "Metadata": {
+            "LastTagTime": "0001-01-01T00:00:00Z"
+        }
+    }
+]

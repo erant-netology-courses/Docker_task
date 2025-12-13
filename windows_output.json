@@ -1,0 +1,74 @@
+type manifest.json
+[
+  {
+    "Config": "blobs/sha256/ca3c514dab11208e53a76949f872da4a782d28b4603ca4c3f4702c29a2092a12",
+    "RepoTags": [
+      "hashicorp/terraform:latest"
+    ],
+    "Layers": [
+      "blobs/sha256/37d4b3303eb52bec812c535f0c129e9290081e1420c88c8f1ad30aaeeed8e624",
+      "blobs/sha256/5652de650aa5c4f0dad7e4809551d15816972c60fd1ebba3f2ba52ddb1fe9718",
+      "blobs/sha256/024234d7107abaafc5dbf2104dea6bff0122667ae41c069881df31ded79d0617",
+      "blobs/sha256/29076fe03d48375ab61768e73e132c29be842081690a8d1db5f4d62c0001b5c7"
+    ]
+  }
+]
+
+docker image inspect hashicorp/terraform:latest
+[
+    {
+        "Id": "sha256:eee2f7d5725bfcfd734dfc9fe5a3df4b58b00eb8cc874993458108d8943265cf",
+        "RepoTags": [
+            "hashicorp/terraform:latest"
+        ],
+        "RepoDigests": [
+            "hashicorp/terraform@sha256:eee2f7d5725bfcfd734dfc9fe5a3df4b58b00eb8cc874993458108d8943265cf"
+        ],
+        "Comment": "buildkit.dockerfile.v0",
+        "Created": "2025-12-11T11:58:55.686243212Z",
+        "Config": {
+            "Env": [
+                "PATH=/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin"
+            ],
+            "Entrypoint": [
+                "/bin/terraform"
+            ],
+            "WorkingDir": "/",
+            "Labels": {
+                "com.hashicorp.terraform.version": "1.14.2",
+                "maintainer": "HashiCorp Terraform Team <terraform@hashicorp.com>",
+                "org.opencontainers.image.authors": "HashiCorp Terraform Team <terraform@hashicorp.com>",
+                "org.opencontainers.image.description": "Terraform enables you to safely and predictably create, change, and improve infrastructure",
+                "org.opencontainers.image.documentation": "https://www.terraform.io/docs",
+                "org.opencontainers.image.licenses": "BUSL-1.1",
+                "org.opencontainers.image.revision": "a7f13bf12b7cd8b478021debc4eee058efd1a3ce",
+                "org.opencontainers.image.source": "https://github.com/hashicorp/terraform",
+                "org.opencontainers.image.title": "terraform",
+                "org.opencontainers.image.url": "https://www.terraform.io/",
+                "org.opencontainers.image.vendor": "HashiCorp",
+                "org.opencontainers.image.version": "1.14.2",
+                "version": "1.14.2"
+            }
+        },
+        "Architecture": "amd64",
+        "Os": "linux",
+        "Size": 45807643,
+        "RootFS": {
+            "Type": "layers",
+            "Layers": [
+                "sha256:5aa68bbbc67e405a7cfa11466b02f1c9597add532909fb9a4d0f6f58a30b044e",
+                "sha256:327b6eb64165183264dfb204dfa0bafca4610df7a7cf6bc08cecb2073a3ecd1e",
+                "sha256:dc0b7a6682cc14eafa56150a2630f18764037c61283379130b4c7484e23b2906",
+                "sha256:7e2a9243ac37762b061fe61d62ebfc3d8905f41c158cc183fd9863645fb45824"
+            ]
+        },
+        "Metadata": {
+            "LastTagTime": "2025-12-13T19:02:23.427177905Z"
+        },
+        "Descriptor": {
+            "mediaType": "application/vnd.docker.distribution.manifest.list.v2+json",
+            "digest": "sha256:eee2f7d5725bfcfd734dfc9fe5a3df4b58b00eb8cc874993458108d8943265cf",
+            "size": 964
+        }
+    }
+]
