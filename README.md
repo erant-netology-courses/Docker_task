@@ -63,6 +63,7 @@ Docker-compose нет. На первых темах модуля разбира�
 ## Задача 6.2
 Через build вытащил файл
 
-https://github.com/erant-netology-courses/Docker_task/blob/main/6_2.JPG
+<img width="1200" height="900" alt="image" src="https://github.com/erant-netology-courses/Docker_task/blob/main/6_2.JPG" />
+
 
 
